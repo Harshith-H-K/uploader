@@ -33,7 +33,7 @@ def upload(request):
             aws_secret_access_key=AWS_SECRET_KEY,
             region_name=AWS_REGION,
         )
-        url = f"http://44.212.64.77/download?filename={filename}"
+        url = f"http://35.85.106.123/download?filename={filename}"
 
         lambda_payload = {"filename": filename, "emails": emails, "url": url}
         res = lambda_client.invoke(
