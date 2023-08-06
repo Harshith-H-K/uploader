@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <title>File Uploader</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>MULTI WEEK ASSIGNMENT HARSH</h1>
+        <form method="post" action="upload/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-input-field">
+                <input type="file" name="image_file" id="image_file" required />
+            </div>
+            <div class="group">
+                <input name="email-input" type="text" placeholder="  Email Address 1" />
+            </div>
+
+            <div class="group">
+                <input name="email-input" type="text" placeholder="  Email Address 2" />
+            </div>
+            <div class="group">
+                <input name="email-input" type="text" placeholder="  Email Address 3" />
+            </div>
+            <div class="group">
+                <input name="email-input" type="text" placeholder="  Email Address 4" />
+            </div>
+            <div class="group">
+                <input name="email-input" type="text" placeholder="  Email Address 5" />
+            </div>
+            <button type="submit" class="bubbly-button">Upload the File</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
